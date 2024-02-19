@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy the cute Labrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing-text"></h1>
+    </header>
+    <section id="intro-section">
+        <h2 id="intro-heading"></h2>
+        <div class="intro-text">
+            <p>Welcome to the Buddy world !</p>
+            <p>Are you ready to embark on an epic journey into the world of Buddy! Dive into a world of endless adventures, unforgettable moments, and a Idiots like not found anywhere!</p>
+            <p><strong>What is special?</strong></p>
+            <ul>
+                <li>🌟 <strong>Sleeping:</strong> Immerse yourself in pure sleepy way with no bounds to stop!</li>
+                <li>🎮 <strong>Exciting games:</strong> Get ready for a blast of tug of War & for thrilling challenges to Take pillow from him.</li>
+                
+            </ul>
+            <p>Join us today and experience funny videos like never before. Your adventure awaits!</p>
+            <a href="https://www.youtube.com/@buddythecutelabrador" class="Youtube-link">Join Our Youtube channel!</a>
+        </div>
+    </section>
+    <div class="animated-circle"></div>
+    <div class="animated-square"></div>
+
+    <footer>
+        <p>"Where every hour is happy hour... nap time" - Buddy</p>
+    </footer>
+    
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var hatroText = "Buddy the cute Labrador";
+            var introText = "Introduction";
+            var introIndex = 0;
+            var hatroIndex = 0;
+
+            function typeHatro() {
+                var hatroInterval = setInterval(function() {
+                    document.getElementById("typing-text").textContent += hatroText[hatroIndex++];
+                    if (hatroIndex >= hatroText.length) {
+                        clearInterval(hatroInterval);
+                        setTimeout(typeIntro, 1000); 
+                    }
+                }, 200);
+            }
+
+            function typeIntro() {
+                var introInterval = setInterval(function() {
+                    document.getElementById("intro-heading").textContent += introText[introIndex++];
+                    if (introIndex >= introText.length) {
+                        clearInterval(introInterval);
+                    }
+                }, 200); 
+            }
+
+            typeHatro(); 
+        });
+    </script>
+</body>
+</html>
